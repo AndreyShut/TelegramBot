@@ -13,4 +13,3 @@ select = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='1.1')
                                                [InlineKeyboardButton(text='2.1')],
                                                [InlineKeyboardButton(text='3.1.1'),
                                                InlineKeyboardButton(text='3.1.2')],])
-check
