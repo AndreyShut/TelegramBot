@@ -1,15 +1,16 @@
 from aiogram.types import (ReplyKeyboardMarkup, KeyboardButton, 
                            InlineKeyboardMarkup,InlineKeyboardButton)
 
-main = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='1')],
-                                     [KeyboardButton(text='2')],
-                                     [KeyboardButton(text='3.1'),
-                                      KeyboardButton(text='3.2')]],
+main = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Расписание')],
+                                     [KeyboardButton(text='Задолжности')],
+                                     [KeyboardButton(text='Новости'),
+                                      KeyboardButton(text='Обновления')]],
                                       resize_keyboard=True,
                                       input_field_placeholder='Выберите пункт меню...')
 
 
-select = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='1.1')],
-                                               [InlineKeyboardButton(text='2.1')],
-                                               [InlineKeyboardButton(text='3.1.1'),
-                                               InlineKeyboardButton(text='3.1.2')],])
+select = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text='Сегодня',callback_data='today')],
+    [InlineKeyboardButton(text='Завтра',callback_data='tomorrow')],
+    [InlineKeyboardButton(text='На 3 дня',callback_data='ThreeDay'),
+    InlineKeyboardButton(text='На неделю',callback_data='Week')],])
